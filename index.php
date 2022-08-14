@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Cesar Szpak">
+    <meta name="author" content="Yann">
     <link rel="icon" href="imagens/favicon.ico">
-    <title>AOL5 - Banco de dados</title>
+    <title>CONTROLE DE ESTOQUE LABORATÓRIO T.I</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="css/signin.css" rel="stylesheet">
@@ -34,11 +34,11 @@
 	<div id="container">
 
       <form class="form-signin" method="POST" action="valida.php">
-        <h2 class="form-signin-heading">Login</h2>
+        <h2 class="form-signin-heading">LABORATÓRIO T.I</h2>
         <label for="login" class="sr-only">Login</label>
-        <input type="text" name="login_usuario" id="login" class="form-control" placeholder="Login" required autofocus>
+        <input type="text" name="login_usuario" id="login" class="form-control" placeholder="Seu login de rede" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" name="senha_usuario" id="inputPassword" class="form-control" placeholder="Senha" required>
+        <input type="password" name="senha_usuario" id="inputPassword" class="form-control" placeholder="Sua senha" required>
         <button class="btn btn-lg btn-success btn-block" type="submit">Acessar</button>
       </form>
 	  <p class="text-center text-success">
@@ -64,7 +64,7 @@
   
   </body>
   <footer>
-Página desenvolvida por YANN BRENNO DA COSTA RAMOS - Matricula: 01388232 - Curso: Analise e desenvolvimento de sistemas (EAD) Uninassau - Campina Grande/PB
+PROJETO EM DESENVOLVIMENTO
 </footer>
   
 </html>

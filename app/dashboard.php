@@ -22,22 +22,17 @@ if(!empty($_SESSION['usuarioNiveisAcessoId'])){
  <body>
 <div id="container">
 <!-- botoes -->
-<h1> <b>SELECIONE A ÁREA QUE DESEJA ACESSAR</b> </h1>
+<h1> <b>VERIFICAR ESTOQUE</b> </h1>
 <?php
-if($_SESSION['usuarioNiveisAcessoId'] == "6" OR $_SESSION['usuarioNiveisAcessoId'] == "4" OR $_SESSION['usuarioNiveisAcessoId'] == "5"){
-echo '<br><center><a class="btn btn-primary" href="cargos/supervisor.php" role="button">SUPERVISOR</a><br> </center>'; 
-}if($_SESSION['usuarioNiveisAcessoId'] == "5" OR $_SESSION['usuarioNiveisAcessoId'] == "4" OR $_SESSION['usuarioNiveisAcessoId'] == "5"){
-echo '<br><center><a class="btn btn-primary" href="cargos/faxineiro.php" role="button">FAXINEIRO</a><br></center>';
 
-}if($_SESSION['usuarioNiveisAcessoId'] == "4" OR $_SESSION['usuarioNiveisAcessoId'] == "6"){
-echo '<br><center><a class="btn btn-primary" href="cargos/administrador.php" role="button">ADMINISTRADOR</a><br></center>';
+//Liberar botão para acessar estoque
+if($_SESSION['usuarioNiveisAcessoId'] == "1" OR $_SESSION['usuarioNiveisAcessoId'] == "2"){
+echo '<br><center><a class="btn btn-primary" href="estoque_app/estoque.php" role="button">ESTOQUE</a><br></center>';
+}
 
-}if($_SESSION['usuarioNiveisAcessoId'] == "3" OR $_SESSION['usuarioNiveisAcessoId'] == "4" OR $_SESSION['usuarioNiveisAcessoId'] == "6"){
-echo '<br><center><a class="btn btn-primary" href="cargos/mecanico.php" role="button">MECANICO</a><br><center>';
-
-}if($_SESSION['usuarioNiveisAcessoId'] == "2" OR $_SESSION['usuarioNiveisAcessoId'] == "4" OR $_SESSION['usuarioNiveisAcessoId'] == "6"){
-echo '<br><center><a class="btn btn-primary" href="cargos/atendente.php" role="button">ATENDENTE</a><br></center>';
-
+//Liberar botão para cadastrar novos usuários
+if($_SESSION['usuarioNiveisAcessoId'] == "2"){
+echo '<br><center><a class="btn btn-primary" href="cadastro_usuario.php" role="button">ALTERAR SENHA</a><br></center>';
 }
 ?>
 </div>

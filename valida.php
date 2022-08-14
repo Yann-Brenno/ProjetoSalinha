@@ -5,7 +5,7 @@
 	if((isset($_POST['login_usuario'])) && (isset($_POST['senha_usuario']))){
 		$usuario = mysqli_real_escape_string($conn, $_POST['login_usuario']); 
 		$senha = mysqli_real_escape_string($conn, $_POST['senha_usuario']);
-		//$senha = md5($senha);
+		$senha = md5($senha);
 			
 		//Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
 		$result_usuario = "SELECT * FROM usuarios WHERE login_usuario = '$usuario' && senha_usuario = '$senha' LIMIT 1";
@@ -15,7 +15,7 @@
 			$_SESSION['usuarioId'] = $resultado['id_usuario'];
 			$_SESSION['usuarioNome'] = $resultado['login_usuario'];
 			$_SESSION['usuarioNiveisAcessoId'] = $resultado['nivel_usuario'];
-			$_SESSION['usuarioEmail'] = $resultado['login_usuario'];
+			$_SESSION['usuarioEmail'] = $resultado['senha_usuario'];
 			if($_SESSION['usuarioNiveisAcessoId'] >= "1"){
 				header("Location: app/dashboard.php");
 	
