@@ -25,8 +25,8 @@
   <thead>
     <tr>
       <th scope="col">#ID</th>
-      <th scope="col">Nome</th>
-      <th scope="col">contato</th>
+      <th scope="col">Item</th>
+      <th scope="col">Quantidade</th>
     </tr>
   </thead>
   <tbody>
