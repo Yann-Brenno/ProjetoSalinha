@@ -27,6 +27,9 @@ if(!empty($_SESSION['usuarioNiveisAcessoId'])){
     <p>
         <label for="ID">ID do item</label>
         <input type="number" name="ID" id="ID">
+		<br>
+		<label for="comentario">Comentario</label>
+        <input type="text" name="comentario" id="comentario">
     </p>
 
     <input id="botao"class="button1" type="submit" value="Retirar">

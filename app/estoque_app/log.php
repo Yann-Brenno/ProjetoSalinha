@@ -32,11 +32,12 @@
       <th scope="col">Nome do Item</th>
       <th scope="col">Quantidade</th>
 	  <th scope="col">Patrimônio</th>
+	    <th scope="col">Comentario</th>
     </tr>
   </thead>
   <tbody>
    <?php 
-  $result_cliente = "SELECT * FROM produtos";
+  $result_cliente = "SELECT * FROM log";
   $resultado_cliente = mysqli_query($conn, $result_cliente);
   while($row_cliente = mysqli_fetch_assoc($resultado_cliente)){
   ?>
@@ -46,6 +47,7 @@
 <th scope="row"><?php echo $row_cliente['nome_item']; ?></th>
 <th scope="row"><?php echo $row_cliente['qtd_item']; ?></th>
 <th scope="row"><?php echo $row_cliente['pat_item']; ?></th>
+<th scope="row"><?php echo $row_cliente['comentario']; ?></th>
     </tr><?php }?>
   </tbody>
 </table>
@@ -64,8 +66,7 @@
 </div>
 <br>
 <br>
-<br> <a href="log.php">LOG</a>
-	<center> <a href="#"> VOLTAR </a></center>
+	<center> <a href="estoque.php"> VOLTAR </a></center>
   </body>
   
   

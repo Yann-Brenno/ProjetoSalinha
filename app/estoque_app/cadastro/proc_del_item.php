@@ -20,6 +20,8 @@ if($link === false){
 }
 
 $ID = mysqli_real_escape_string($link, $_REQUEST['ID']);
+$comentario = mysqli_real_escape_string($link, $_REQUEST['comentario']);
+
  
 
 $sql = "DELETE FROM  produtos WHERE ID='$ID'";
@@ -31,6 +33,27 @@ if(mysqli_query($link, $sql)){
 
 mysqli_close($link);
 
+
+
+
+/* Nova conexão com o banco de dados, eu sei que criei um arquivo só pra isso e uma variavel pra conexão, mais pra esse caso preferi criar dnv */
+$link = mysqli_connect("localhost", "root", "", "lab_ti_aec");
+ 
+if($link === false){
+    die("ERRO NA DB" . mysqli_connect_error());
+}
+
+$ID = mysqli_real_escape_string($link, $_REQUEST['ID']);
+$comentario = mysqli_real_escape_string($link, $_REQUEST['comentario']);
+
+ 
+
+$sql = "UPDATE log SET comentario='$comentario' WHERE ID='$ID'";
+if(mysqli_query($link, $sql)){
+    
+}
+
+mysqli_close($link);
 ?>
 		
          <center> <input id="botao_voltar" type="button" value="Voltar" onclick="history.go(-1)"> <center>

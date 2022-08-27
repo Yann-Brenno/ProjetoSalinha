@@ -34,6 +34,25 @@ if(mysqli_query($link, $sql)){
 
 mysqli_close($link);
 
+
+
+$link = mysqli_connect("localhost", "root", "", "lab_ti_aec");
+ 
+if($link === false){
+    die("ERRO NA DB" . mysqli_connect_error());
+}
+
+$cod_rm = mysqli_real_escape_string($link, $_REQUEST['cod_rm']);
+$nome_item = mysqli_real_escape_string($link, $_REQUEST['nome_item']);
+$qtd_item = mysqli_real_escape_string($link, $_REQUEST['qtd_item']);
+$pat_item = mysqli_real_escape_string($link, $_REQUEST['pat_item']);
+ 
+
+$sql = "INSERT INTO log (cod_rm, nome_item, qtd_item, pat_item) VALUES ('$cod_rm', '$nome_item', '$qtd_item', '$pat_item')";
+if(mysqli_query($link, $sql))
+
+
+mysqli_close($link);
 ?>
 		
          <center> <input id="botao_voltar" type="button" value="Voltar" onclick="history.go(-1)"> <center>
