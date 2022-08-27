@@ -11,7 +11,8 @@
 ?>
 <br> <a href="../sair.php">Sair</a>
 <br>
-<center><a href="cadastro/cad_item.php">Cadastrar novo item</a></center
+<center><a href="cadastro/cad_item.php">Cadastrar novo item</a></center<br>
+<center><a href="cadastro/del_item.php">Retirar item</a></center
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
