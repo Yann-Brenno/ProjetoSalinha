@@ -26,7 +26,7 @@ if(!empty($_SESSION['usuarioNiveisAcessoId'])){
 <form action="proc_del_item.php" method="post">
     <p>
         <label for="ID">ID do item</label>
-        <input id="1" type="number" name="ID" id="ID">
+        <input type="number" name="ID" id="ID">
     </p>
 
     <input id="botao"class="button1" type="submit" value="Retirar">
@@ -104,147 +104,25 @@ body {
 
 //INPUTSSSSSS
 //desabilita o botão no início
-document.getElementById("2").hidden = true;
+document.getElementById("botao").hidden = true;
 
 //cria um event listener que escuta mudanças no input
-document.getElementById("1").addEventListener("input", function(event){
+document.getElementById("ID").addEventListener("input", function(event){
 
   //busca conteúdo do input
-    var conteudo = document.getElementById("1").value;
+    var conteudo = document.getElementById("ID").value;
 
     //valida conteudo do input 
     if (conteudo !== null && conteudo !== '') {
       //habilita o botão
-      document.getElementById("2").hidden = false;
+      document.getElementById("botao").hidden = false;
     } else {
       //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("2").hidden = true;
-    }
-});
-
-//desabilita o botão no início
-document.getElementById("3").hidden = true;
-
-//cria um event listener que escuta mudanças no input
-document.getElementById("2").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var conteudo = document.getElementById("2").value;
-
-    //valida conteudo do input 
-    if (conteudo !== null && conteudo !== '') {
-      //habilita o botão
-      document.getElementById("3").hidden = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("3").hidden = true;
-    }
-});
-
-//desabilita o botão no início
-document.getElementById("4").hidden = true;
-
-//cria um event listener que escuta mudanças no input
-document.getElementById("3").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var conteudo = document.getElementById("3").value;
-
-    //valida conteudo do input 
-    if (conteudo !== null && conteudo !== '') {
-      //habilita o botão
-      document.getElementById("4").hidden = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("4").hidden = true;
+      document.getElementById("botao").hidden = true;
     }
 });
 
 
-
-
-
-
-
-
-//LABELSSSSSSSSSSSS
-//desabilita o botão no início
-document.getElementById("label-nome").hidden = true;
-
-//cria um event listener que escuta mudanças no input
-document.getElementById("1").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var conteudo = document.getElementById("1").value;
-
-    //valida conteudo do input 
-    if (conteudo !== null && conteudo !== '') {
-      //habilita o botão
-      document.getElementById("label-nome").hidden = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("label-nome").hidden = true;
-    }
-});
-
-
-//desabilita o botão no início
-document.getElementById("label-qtd").hidden = true;
-
-//cria um event listener que escuta mudanças no input
-document.getElementById("2").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var conteudo = document.getElementById("2").value;
-
-    //valida conteudo do input 
-    if (conteudo !== null && conteudo !== '') {
-      //habilita o botão
-      document.getElementById("label-qtd").hidden = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("label-qtd").hidden = true;
-    }
-});
-
-
-//desabilita o botão no início
-document.getElementById("label-pat").hidden = true;
-
-//cria um event listener que escuta mudanças no input
-document.getElementById("3").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var conteudo = document.getElementById("3").value;
-
-    //valida conteudo do input 
-    if (conteudo !== null && conteudo !== '') {
-      //habilita o botão
-      document.getElementById("label-pat").hidden = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("label-pat").hidden = true;
-    }
-});
-
-//desabilita o botão no início
-document.getElementById("botao").disabled = true;
-
-//cria um event listener que escuta mudanças no input
-document.getElementById("4").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var conteudo = document.getElementById("4").value;
-
-    //valida conteudo do input 
-    if (conteudo !== null && conteudo !== '') {
-      //habilita o botão
-      document.getElementById("botao").disabled = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("botao").disabled = true;
-    }
-});
 
 </script>
 
