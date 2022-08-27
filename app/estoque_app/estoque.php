@@ -65,7 +65,7 @@
 <br>
 <br>
 <br> <a href="log.php">LOG</a>
-	<center> <a href="#"> VOLTAR </a></center>
+	<center> <a href="../dashboard.php"> VOLTAR </a></center>
   </body>
   
   
@@ -97,15 +97,84 @@ h2:hover {
 	text-align: center;
 -webkit-box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0px #999393, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #999393, 5px 5px 15px 5px rgba(0,0,0,0); 
 box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0px #999393, 20px 20px 0px 0px #999393, 25px 25px 0px 0px #999393, 5px 5px 15px 5px rgba(0,0,0,0);
+
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+
+
+
+
+}
+
 
 body {
-  background-color: #3FB3B3;
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
+	
+	font-family: 'Brush Script MT', cursive;
+	font-size: auto;
+	-webkit-animation: color-change-5x 8s linear infinite alternate both;
+	        animation: color-change-5x 8s linear infinite alternate both;
 }
 
+@-webkit-keyframes color-change-5x {
+  0% {
+    background: #19dcea;
+  }
+  25% {
+    background: #b22cff;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
+@keyframes color-change-5x {
+  0% {
+    background: #19dcea;
+  }
+  25% {
+    background: #b22cff;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
+
+#example{
+	font-size: auto;
+}
 
 </style>
 

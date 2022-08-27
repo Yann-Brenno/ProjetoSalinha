@@ -33,6 +33,7 @@
       <th scope="col">Quantidade</th>
 	  <th scope="col">Patrimônio</th>
 	    <th scope="col">Comentario</th>
+		  <th scope="col">Alteração feita por</th>
     </tr>
   </thead>
   <tbody>
@@ -48,6 +49,7 @@
 <th scope="row"><?php echo $row_cliente['qtd_item']; ?></th>
 <th scope="row"><?php echo $row_cliente['pat_item']; ?></th>
 <th scope="row"><?php echo $row_cliente['comentario']; ?></th>
+<th scope="row"><?php echo $row_cliente['usuario']; ?></th>
     </tr><?php }?>
   </tbody>
 </table>
