@@ -26,7 +26,7 @@ if(!empty($_SESSION['usuarioNiveisAcessoId'])){
 <form action="proc_cad_item.php" method="post">
     <p>
         <label for="cod_rm">Codigo RM:</label>
-        <input id="1" type="number" name="cod_rm" id="cod_rm">
+        <input id="1" type="text" name="cod_rm" id="cod_rm">
     </p>
     <p>
         <label id="label-nome" for="nome_item">Nome do item:</label>

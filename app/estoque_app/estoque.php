@@ -22,6 +22,8 @@
   
   <body>
   <div class="container">
+	<div id="container-est">
+  <div class="container">
   <table id="example" class="table">
   <thead>
     <tr>
@@ -59,21 +61,50 @@
                </script>
 
 </div>
+</div>
 <br>
 <br>
-<center><a href="../dashboard.php">Voltar</a></cener>
+	<center> <a href="#"> VOLTAR </a></center>
   </body>
   
   
    <!-- CSS -->
    <style>
+   
+   h2{
+	font-family: 'Brush Script MT', cursive;
+}
+input{
+	font-family: 'Brush Script MT', cursive;
+}
+label{
+	font-family: 'Brush Script MT', cursive;
+}
+h2:hover {
+	color: #FF0000;
+}
+
+#container-est {
+	background-color: #999393;
+	opacity: 0.9;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 30px;
+	margin-top: 10vh;
+	border-radius: 10px;
+	text-align: center;
+-webkit-box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0px #999393, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #999393, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0px #999393, 20px 20px 0px 0px #999393, 25px 25px 0px 0px #999393, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
 body {
   background-color: #3FB3B3;
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
-
 }
+
 
 </style>
 
