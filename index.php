@@ -40,6 +40,7 @@
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" name="senha_usuario" id="inputPassword" class="form-control" placeholder="Sua senha" required>
         <button class="btn btn-lg btn-success btn-block" type="submit">Acessar</button>
+		<a href="reset_senha.php"> Esqueceu a senha? CLIQUE AQUI </a>
       </form>
 	  <p class="text-center text-success">
 			<?php if(isset($_SESSION['loginErro'])){

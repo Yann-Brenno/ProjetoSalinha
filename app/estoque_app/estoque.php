@@ -11,7 +11,7 @@
 ?>
 <br> <a href="../sair.php">Sair</a>
 <br>
-<center><a href="cadastro/novo_cliente.php">Cadastrar novo cliente</a></center
+<center><a href="cadastro/cad_item.php">Cadastrar novo item</a></center
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
@@ -24,21 +24,25 @@
   <table id="example" class="table">
   <thead>
     <tr>
-      <th scope="col">#ID</th>
-      <th scope="col">Item</th>
+	 <th scope="col">#ID</th>
+      <th scope="col">Código RM</th>
+      <th scope="col">Nome do Item</th>
       <th scope="col">Quantidade</th>
+	  <th scope="col">Patrimônio</th>
     </tr>
   </thead>
   <tbody>
    <?php 
-  $result_cliente = "SELECT * FROM clientes";
+  $result_cliente = "SELECT * FROM produtos";
   $resultado_cliente = mysqli_query($conn, $result_cliente);
   while($row_cliente = mysqli_fetch_assoc($resultado_cliente)){
   ?>
     <tr>
-<th scope="row"><?php echo $row_cliente['id_cliente']; ?></th>
-<th scope="row"><?php echo $row_cliente['nome_cliente']; ?></th>
-<th scope="row"><?php echo $row_cliente['contato_cliente']; ?></th>
+<th scope="row"><?php echo $row_cliente['ID']; ?></th>
+<th scope="row"><?php echo $row_cliente['cod_rm']; ?></th>
+<th scope="row"><?php echo $row_cliente['nome_item']; ?></th>
+<th scope="row"><?php echo $row_cliente['qtd_item']; ?></th>
+<th scope="row"><?php echo $row_cliente['pat_item']; ?></th>
     </tr><?php }?>
   </tbody>
 </table>
