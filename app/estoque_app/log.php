@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	echo "Usuario: ". $_SESSION['usuarioNome'];	
+echo "<b><font color='#B4ADAB'>Usuario:<font></b> ". $_SESSION['usuarioNome'];
 	include_once("../../conexao.php");
-	if(!empty($_SESSION['usuarioNiveisAcessoId'] == '2' OR $_SESSION['usuarioNiveisAcessoId'] == '4' OR $_SESSION['usuarioNiveisAcessoId'] == '6' AND $_SESSION['id_usuario'])){
+	if(!empty($_SESSION['usuarioNiveisAcessoId'] == '3' OR $_SESSION['usuarioNiveisAcessoId'] == '6' AND $_SESSION['id_usuario'])){
 
 }else{
     $_SESSION['msg'] = "Área restrita";
@@ -103,6 +103,7 @@ box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0p
 }
 
 body {
+  background-image: url('../../imagens/log.jpg');
   background-color: #3FB3B3;
   background-repeat: no-repeat;
   background-attachment: fixed;  

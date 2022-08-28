@@ -20,18 +20,19 @@ if(!empty($_SESSION['usuarioNiveisAcessoId'])){
   </head>
 <a class="btn btn-primary" href="sair.php" role="button">Sair</a>
  <body>
+ 
 <div id="container">
 <!-- botoes -->
 <h1> <b>VERIFICAR ESTOQUE</b> </h1>
 <?php
 
 //Liberar botão para acessar estoque
-if($_SESSION['usuarioNiveisAcessoId'] == "1" OR $_SESSION['usuarioNiveisAcessoId'] == "2"){
+if($_SESSION['usuarioNiveisAcessoId'] == "1" OR $_SESSION['usuarioNiveisAcessoId'] == "2" OR $_SESSION['usuarioNiveisAcessoId'] == "3"){
 echo '<br><center><a class="btn btn-primary" href="estoque_app/estoque.php" role="button">ESTOQUE</a><br></center>';
 }
 
 //Liberar botão para cadastrar novos usuários
-if($_SESSION['usuarioNiveisAcessoId'] == "2"){
+if($_SESSION['usuarioNiveisAcessoId'] == "2" OR $_SESSION['usuarioNiveisAcessoId'] == "3"){
 echo '<br><center><a class="btn btn-primary" href="cadastro_usuario.php" role="button">ALTERAR SENHA</a><br></center>';
 }
 ?>
@@ -43,7 +44,11 @@ echo '<br><center><a class="btn btn-primary" href="cadastro_usuario.php" role="b
   
   <!-- CSS -->
    <style>
+ 
+   
+   
 body {
+  background-image: url('../imagens/dashbg.jpg');
   background-color: #3FB3B3;
   background-repeat: no-repeat;
   background-attachment: fixed;  
@@ -51,7 +56,7 @@ body {
 }
 #container {
 	background-color: #FFFFFF;
-	opacity: 0.9;
+	opacity: 0.95;
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;

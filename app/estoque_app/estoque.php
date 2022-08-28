@@ -1,20 +1,32 @@
+<a href="../sair.php">Sair</a><br>
 <?php
 	session_start();
-	echo "Usuario: ". $_SESSION['usuarioNome'];	
+echo "<b><font color='#FFFFFF'>Usuario:<font></b> ". $_SESSION['usuarioNome'];
 	include_once("../../conexao.php");
-	if(!empty($_SESSION['usuarioNiveisAcessoId'] == '2' OR $_SESSION['usuarioNiveisAcessoId'] == '4' OR $_SESSION['usuarioNiveisAcessoId'] == '6' AND $_SESSION['id_usuario'])){
+	if(!empty($_SESSION['usuarioNiveisAcessoId'] == '2' OR $_SESSION['usuarioNiveisAcessoId'] == '3' OR $_SESSION['usuarioNiveisAcessoId'] == '6' AND $_SESSION['id_usuario'])){
 
 }else{
     $_SESSION['msg'] = "Área restrita";
     header("Location: ../acesso_negado.php");
 }
+if($_SESSION['usuarioNiveisAcessoId'] == "3"){
+echo '<br><center><a class="btn btn-primary" href="log.php" role="button">LOG</a><br></center>';
+}
 ?>
-<br> <a href="../sair.php">Sair</a>
 <br>
 <center><a href="cadastro/cad_item.php">Cadastrar novo item</a></center<br>
 <center><a href="cadastro/del_item.php">Retirar item</a></center
 <html lang="pt-br">
   <head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Yann">
+    <link rel="icon" href="imagens/favicon.ico">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="../../js/ie-emulation-modes-warning.js"></script>
     <meta charset="utf-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> </script>
@@ -64,7 +76,7 @@
 </div>
 <br>
 <br>
-<br> <a href="log.php">LOG</a>
+
 	<center> <a href="../dashboard.php"> VOLTAR </a></center>
   </body>
   
@@ -130,46 +142,8 @@ box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0p
 
 
 body {
-	
-	font-family: 'Brush Script MT', cursive;
-	font-size: auto;
-	-webkit-animation: color-change-5x 8s linear infinite alternate both;
-	        animation: color-change-5x 8s linear infinite alternate both;
-}
-
-@-webkit-keyframes color-change-5x {
-  0% {
-    background: #19dcea;
-  }
-  25% {
-    background: #b22cff;
-  }
-  50% {
-    background: #ea2222;
-  }
-  75% {
-    background: #f5be10;
-  }
-  100% {
-    background: #3bd80d;
-  }
-}
-@keyframes color-change-5x {
-  0% {
-    background: #19dcea;
-  }
-  25% {
-    background: #b22cff;
-  }
-  50% {
-    background: #ea2222;
-  }
-  75% {
-    background: #f5be10;
-  }
-  100% {
-    background: #3bd80d;
-  }
+	font-size: 15px;
+	background-image: url('../../imagens/stqbg.jpg');
 }
 
 #example{

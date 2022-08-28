@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-	echo "<b><font color='#080808'>Usuario:<font></b> ". $_SESSION['usuarioNome'];
+	echo "<b><font color='#FFFFFF'>Usuario:<font></b> ". $_SESSION['usuarioNome'];
 if(!empty($_SESSION['usuarioNiveisAcessoId'])){
 
 }else{
@@ -69,7 +69,7 @@ h2:hover {
 
 #container-cad {
 	background-color: #FAA537;
-	opacity: 0.9;
+	opacity: 1;
 	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
@@ -83,6 +83,7 @@ box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px
 }
 
 body {
+  background-image: url('../../../imagens/cad.jpg');
   background-color: #3FB3B3;
   background-repeat: no-repeat;
   background-attachment: fixed;  
