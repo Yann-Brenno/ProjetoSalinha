@@ -1,6 +1,6 @@
 <?php
-	session_start();
 	include("../load/load.php");
+	session_start();
 	echo "<b><font color='#FFFFFF'>Usuario:<font></b> ". $_SESSION['usuarioNome'];
 if(!empty($_SESSION['usuarioNiveisAcessoId'])){
 
