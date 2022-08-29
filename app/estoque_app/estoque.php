@@ -1,4 +1,4 @@
-<a href="../sair.php">Sair</a><br>
+<a class="btn btn-primary" href="../sair.php" role="button">Sair</a>
 <?php
 	session_start();
 echo "<b><font color='#FFFFFF'>Usuario:<font></b> ". $_SESSION['usuarioNome'];
@@ -14,8 +14,8 @@ echo '<br><center><a class="btn btn-primary" href="log.php" role="button">LOG</a
 }
 ?>
 <br>
-<center><a href="cadastro/cad_item.php">Cadastrar novo item</a></center<br>
-<center><a href="cadastro/del_item.php">Retirar item</a></center
+<center><a class="btn btn-primary" href="cadastro/cad_item.php" role="button">Cadastrar novo item</a><br>
+<br><a class="btn btn-primary" href="cadastro/del_item.php" role="button">Retirar item</a></center>
 <html lang="pt-br">
   <head>
       <meta charset="utf-8">
@@ -76,8 +76,7 @@ echo '<br><center><a class="btn btn-primary" href="log.php" role="button">LOG</a
 </div>
 <br>
 <br>
-
-	<center> <a href="../dashboard.php"> VOLTAR </a></center>
+     <center><a class="btn btn-primary" href="../dashboard.php" role="button">Voltar</a></center>
   </body>
   
   
@@ -144,12 +143,102 @@ box-shadow: 5px 5px 0px 0px #999393, 10px 10px 0px 0px #999393, 15px 15px 0px 0p
 body {
 	font-size: 15px;
 	background-image: url('../../imagens/stqbg.jpg');
+	
 }
 
 #example{
 	font-size: auto;
 }
 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    /*background-color:#70dbdb;  cor do background que vai ocupar o body */
+	background-color: #e7dfdd;
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.bolas > div {
+  display: inline-block;
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 3px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: animarBola;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+   
+}
+.bolas > div:nth-child(1) {
+    animation-duration:0.75s ;
+    animation-delay: 0;
+}
+.bolas > div:nth-child(2) {
+    animation-duration: 0.75s ;
+    animation-delay: 0.12s;
+}
+.bolas > div:nth-child(3) {
+    animation-duration: 0.75s  ;
+    animation-delay: 0.24s;
+}
+ 
+@keyframes animarBola {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  16% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0.7;
+  }
+  33% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; 
+  } 
+}
 </style>
 
+
+
+<!-- ZONA DE PERIGO EXPERIMENTAL  -->
+
+<center>
+<!-- ICONE OU GIF QUE IRÁ APARECER NA PÁGINA-->
+<div id="preloader">
+    <div class="inner">
+          <centeR><img src="../../imagens/load.gif"></center>
+    </div>
+</div>
+<!-- ICONE OU GIF QUE IRÁ APARECER NA PÁGINA-->
+
+<!-- SCRIPT QUE PUXA O LOAD -->
+<script>
+  //<![CDATA[
+  $(window).on('load', function () {
+    $('#preloader .inner').fadeOut();
+    $('#preloader').delay(200).fadeOut('slow'); 
+    $('html').delay(200).css({'overflow': 'visible'});
+  })
+  //]]>
+  
+  </script>
+<!-- SCRIPT QUE PUXA O LOAD -->
+</center>
+
+
+<!-- ZONA DE PERIGO EXPERIMENTAL  -->
 </html>
